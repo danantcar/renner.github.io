@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Deixe sua Opinião aqui!</title>
+
+	<style>
+		*{ margin:0; padding:0;}
+
+		body{ font:100% normal Arial, Helvetica, sans-serif; background:#FFFFFF;}
+
+		form,select,textarea{margin:0; padding:0; color:#444444;}
+		input{margin:0; padding:0; color:#FFFFFF;}
+
+		div.box {
+			margin:0 auto;
+			width:500px;
+			background:#FFFFFF;			
+			position:relative;
+			top:50px;
+			border:0px solid #FFFFFF;
+		}
+
+		div.box h1 {
+			color:#000000;
+			font-size:9px;
+			text-transform:uppercase;
+			padding:1px 0 15px 5px;
+			border-bottom:0px solid #161712;
+			border-top:0px solid #161712;
+		}
+		
+		div.box h2 {
+			color:#000000;
+			font-size:12px;
+			text-transform:uppercase;
+			padding:5px 0 5px 5px;
+			border-bottom:0px solid #161712;
+			border-top:0px solid #161712;
+		}		
+		
+		div.box .img-produto {
+			width: 110px;
+			height: 110px;
+			padding:5px 0 5px 5px;
+			border-bottom:0px solid #161712;
+			border-top:0px solid #161712;
+		}		
+			
+		div.box .produto {
+			color:#000000;
+			font-size:10px;
+			text-transform:uppercase;
+			padding:5px 0 5px 5px;
+			border-bottom:1px solid #161712;
+			border-top:1px solid #161712;
+		}	
+
+		div.box label {
+			width:100%;
+			display: block;
+			background:#FFFFFF;
+			border-top:0px solid #262626;
+			border-bottom:0px solid #161712;
+			padding:10px 0 10px 0;
+		}
+
+		div.box label span {
+			display: block;
+			color:#888888;
+			font-size:12px;
+			float:left;
+			width:135px;
+			text-align:right;
+			padding:5px 20px 0 0;
+		}
+
+		div.box .input_text {
+			padding:10px 10px;
+			width:325px;
+			background:#EEEEEE;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333333;
+			border-right:1px double #333333;
+		}
+		
+		div.box .check_label {
+			color:#000000;
+			font-size:10px;
+			text-transform:uppercase;
+			padding:5px 0 5px 5px;
+			border-bottom:0px solid #161712;
+			border-top:0px solid #161712;
+		}	
+		
+		div.box .input_check {
+			padding:10px 10px;
+			width:30px;
+			background:#EEEEEE;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333333;
+			border-right:1px double #333333;
+		}
+
+		div.box .select-motivo{
+			padding:7px 7px;
+			width:335px;
+			background:#EEEEEE;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333333;
+			border-right:1px double #333333;
+			overflow:hidden;
+		}
+
+
+		div.box .message{
+			padding:7px 7px;
+			width:320px;
+			background:#EEEEEE;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333333;
+			border-right:1px double #333333;
+			overflow:hidden;
+			height:150px;
+		}
+
+		div.box .button{
+			margin:0 0 10px 0;
+			padding:4px 7px;
+			background:#CC0000;
+			border:0px;
+			position: relative;
+			top:10px;
+			left:382px;
+			width:100px;
+			border-bottom: 1px double #660000;
+			border-top: 1px double #660000;
+			border-left:1px double #FF0033;
+			border-right:1px double #FF0033;
+		}	
+		
+		.brand_icon {
+			width: 100px;
+			height: 18px;
+		}
+		
+		.bloco_motivo {
+			display: none;		
+		}		
+	</style>
+	
+	<script>
+		function showReason() {
+			document.getElementById('motivo').style.display = "inline";
+		}
+		function hideReason() {
+			document.getElementById('motivo').style.display = "";
+		}
+		function sendFeedBack() {
+			alert('Obrigado pela sua opinião! É muito importante para nós!');
+		}
+	</script>
+	
+</head>
+<body>
+<form name="meuForm" method="post" id="formulario">
+	<div class="box">
+	
+		<img src="https://img.lojasrenner.com.br/banner/img/logo_red3.png" alt="Moda Feminina, Masculina, Infantil e Perfumes" class="brand_icon">
+		
+		<div class="produto">	
+			<h1>Deixe sua Opinião aqui</h1>
+			<h2>BLUSA CROPPED FLORAL COM MANGA AMPLA E AMARRAÇÃO AZUL</h2>
+			<img src="https://img.lojasrenner.com.br/item/551765763/zoom/1.jpg" class="img-produto">	
+			<img src="https://img.lojasrenner.com.br/item/551765763/zoom/2.jpg" class="img-produto">
+			<img src="https://img.lojasrenner.com.br/item/551765763/zoom/3.jpg" class="img-produto">
+			<img src="https://img.lojasrenner.com.br/item/551765763/zoom/4.jpg" class="img-produto">			
+		</div>
+
+		<label>
+			<span>Gostou deste produto?</span>
+			<div class="check_label">
+				<input type="radio" id="p1" name="p1" value="3" class="input_check" onClick="hideReason()">Sim
+				<input type="radio" id="p1" name="p1" value="2" class="input_check" onClick="showReason()">Mais ou menos
+				<input type="radio" id="p1" name="p1" value="1" class="input_check" onClick="showReason()">Não
+			</div>
+		</label>
+
+		<div id="motivo" class="bloco_motivo">
+			<label>
+				<span>Que pena! Por que não?</span>
+				<select id="p2" class="select-motivo">
+				  <option value="0" selected></option>
+				  <option value="1">Produto não me agradou</option>
+				  <option value="2">Não encontrei o meu tamanho</option>
+				  <option value="3">Não encontrei informações suficientes sobre o produto (medidas, tecido, detalhes, entre outros</option>
+				  <option value="4">Não gostei da cor/estampa</option>
+				  <option value="5">Não gostei do tecido</option>
+				  <option value="6">Problema de qualidade/modelagem/costura/acabamento</option>
+				  <option value="7">Outro motivo</option>
+				</select>				
+			 </label>
+		</div>	 
+
+		<label>
+			 <span>Nos conte mais!</span>
+			<textarea class="message" name="p4" id="p4"></textarea>
+			<input type="button" class="button" value="Enviar" onclick="sendFeedBack()" />
+		</label>
+	</div>
+</form>
+</body>
+</html>
